@@ -27,6 +27,14 @@ const respuestasCarreras = {
         mensaje: 'Para conocer más detalles acerca de la carrera de Ing. Informática te comparto la siguiente imagen 😎' ,
         media: 'https://i.ibb.co/BGxBRRw/info.jpg'
     },
+    'Informática': {
+        mensaje: 'Para conocer más detalles acerca de la carrera de Ing. Informática te comparto la siguiente imagen 😎' ,
+        media: 'https://i.ibb.co/BGxBRRw/info.jpg'
+    },
+    'Informatica': {
+        mensaje: 'Para conocer más detalles acerca de la carrera de Ing. Informática te comparto la siguiente imagen 😎' ,
+        media: 'https://i.ibb.co/BGxBRRw/info.jpg'
+    },
 
     // Mensaje de agronomía
     'agronomia': {
@@ -37,9 +45,21 @@ const respuestasCarreras = {
         mensaje: 'Para conocer más detalles acerca de la carrera de Ing. En Agronomía te comparto la siguiente imagen 😎',
         media: 'https://i.ibb.co/3prSNNM/Agro.jpg'
     },
+    'Agronomia': {
+        mensaje: 'Para conocer más detalles acerca de la carrera de Ing. En Agronomía te comparto la siguiente imagen 😎',
+        media: 'https://i.ibb.co/3prSNNM/Agro.jpg'
+    },
+    'Agronomía': {
+        mensaje: 'Para conocer más detalles acerca de la carrera de Ing. En Agronomía te comparto la siguiente imagen 😎',
+        media: 'https://i.ibb.co/3prSNNM/Agro.jpg'
+    },
 
     // Mensaje de industrial
     'industrial': {
+        mensaje: 'Para conocer más detalles acerca de la carrera de Ing. Industrial te comparto la siguiente imagen 😎',
+        media: 'https://i.ibb.co/CPdWcH0/Industrial.jpg'
+    },
+    'Industrial': {
         mensaje: 'Para conocer más detalles acerca de la carrera de Ing. Industrial te comparto la siguiente imagen 😎',
         media: 'https://i.ibb.co/CPdWcH0/Industrial.jpg'
     },
@@ -54,12 +74,29 @@ const respuestasCarreras = {
         media: 'https://i.ibb.co/mSB6Ntk/Erenovables.jpg'
     },
 
+    'Energias renovables': {
+        mensaje: 'Para conocer más detalles acerca de la carrera de Ing. en Energías Renovables te comparto la siguiente imagen 😎',
+        media: 'https://i.ibb.co/mSB6Ntk/Erenovables.jpg'
+    },
+    'Energías renovables': {
+        mensaje: 'Para conocer más detalles acerca de la carrera de Ing. en Energías Renovables te comparto la siguiente imagen ',
+        media: 'https://i.ibb.co/mSB6Ntk/Erenovables.jpg'
+    },
+
     // Mensaje de bioquímica
     'bioquimica': {
         mensaje: 'Para conocer más detalles acerca de la carrera en Ing. Bioquímica te comparto la siguiente imagen 😎',
         media: 'https://i.ibb.co/ZXjN1b0/Bioq.jpg'
     },
     'bioquímica': {
+        mensaje: 'Para conocer más detalles acerca de la carrera en Ing. Bioquímica te comparto la siguiente imagen 😎',
+        media: 'https://i.ibb.co/ZXjN1b0/Bioq.jpg'
+    },
+    'Bioquimica': {
+        mensaje: 'Para conocer más detalles acerca de la carrera en Ing. Bioquímica te comparto la siguiente imagen 😎',
+        media: 'https://i.ibb.co/ZXjN1b0/Bioq.jpg'
+    },
+    'Bioquímica': {
         mensaje: 'Para conocer más detalles acerca de la carrera en Ing. Bioquímica te comparto la siguiente imagen 😎',
         media: 'https://i.ibb.co/ZXjN1b0/Bioq.jpg'
     },
@@ -73,6 +110,14 @@ const respuestasCarreras = {
         mensaje: 'Para conocer más detalles acerca de la carrera de Ing. Electromecánica te comparto la siguiente imagen 😎',
         media: 'https://i.ibb.co/GMp0WgY/Electro.jpg'
     },
+    'Electromecanica': {
+        mensaje: 'Para conocer más detalles acerca de la carrera de Ing. Electromecánica te comparto la siguiente imagen 😎',
+        media: 'https://i.ibb.co/GMp0WgY/Electro.jpg'
+    },
+    'Electromecánica': {
+        mensaje: 'Para conocer más detalles acerca de la carrera de Ing. Electromecánica te comparto la siguiente imagen 😎',
+        media: 'https://i.ibb.co/GMp0WgY/Electro.jpg'
+    },
 
     // Mensaje de administración
     'administracion': {
@@ -82,7 +127,16 @@ const respuestasCarreras = {
     'administración': {
         mensaje: 'Para conocer más detalles acerca de la carrera de Ing. En Administración de Empresas te comparto la siguiente imagen 😎',
         media: 'https://i.ibb.co/S0jRht0/Admin.jpg'
+    },
+    'Administracion': {
+        mensaje: 'Para conocer más detalles acerca de la carrera de Ing. En Administración de Empresas te comparto la siguiente imagen 😎',
+        media: 'https://i.ibb.co/S0jRht0/Admin.jpg'
+    },
+    'Administración': {
+        mensaje: 'Para conocer más detalles acerca de la carrera de Ing. En Administración de Empresas te comparto la siguiente imagen 😎',
+        media: 'https://i.ibb.co/S0jRht0/Admin.jpg'
     }
+    
 };
 
 // Flujos para talleres
@@ -101,7 +155,7 @@ const flowInformacionCarreras = addKeyword(['1', 'Informacion', 'Información'])
     })
     .addAnswer('Por favor, escribe el nombre de la carrera.', {
         capture: true,
-        delay: 5000 // Añadido retraso en la respuesta
+        // delay: 5000 // Añadido retraso en la respuesta
     }, async (ctx, { provider }) => {
         const respuesta = ctx.body.toLowerCase().trim();
         const respuestaCarrera = respuestasCarreras[respuesta];
