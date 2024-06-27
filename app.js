@@ -96,8 +96,13 @@ const respuestasCarreras = {
 
 // Flujo para preguntar sobre la carrera deseada
 const flowInformacionCarreras = addKeyword(['1', 'Informacion', 'Información'])
-    .addAnswer('Contamos con 7 carreras:\n*- Administración* \n*- Agronomía* \n*- Bioquímica*\n*- Electromecánica*\n*- Energías renovables*\n*- Industrial* \n*- Informática* \n¿De qué carrera te gustaría información?')
-    .addAnswer('Por favor, escribe el nombre de la carrera.', { capture: true }, async (ctx, { provider }) => {
+    .addAnswer('Contamos con 7 carreras:\n*- Administración* \n*- Agronomía* \n*- Bioquímica*\n*- Electromecánica*\n*- Energías renovables*\n*- Industrial* \n*- Informática* \n¿De qué carrera te gustaría información?', {
+        delay: 5000 // Añadido retraso en la respuesta
+    })
+    .addAnswer('Por favor, escribe el nombre de la carrera.', {
+        capture: true,
+        delay: 5000 // Añadido retraso en la respuesta
+    }, async (ctx, { provider }) => {
         const respuesta = ctx.body.toLowerCase().trim();
         const respuestaCarrera = respuestasCarreras[respuesta];
 
@@ -109,19 +114,19 @@ const flowInformacionCarreras = addKeyword(['1', 'Informacion', 'Información'])
         } else {
             await provider.sendText(ctx.from + '@s.whatsapp.net', 'Lo siento, no entendí tu respuesta. Por favor, elige una de las opciones proporcionadas.');
         }
-        
     });
+
 
 // Flujo para informacion de la institucion
 const flowInstitucion = addKeyword(['2', 'Institución', 'Institucion'])
     .addAnswer('INFORMACION DEL ITSS', {
-        delay: 10000
+        delay: 5000
     });
 
 // Flujo de ubicación
 const flowUbicacion = addKeyword(['4', 'Ubicacion', 'Ubicación'])
     .addAnswer('https://maps.app.goo.gl/uz1Rfp3XVdDrJriB9 \n Nos encontramos ubicados en📍: \nCarret. Teapa-Tacotalpa Km 4.5 Ej. Fco Javier Mina 86801 Teapa, Tabasco, Mexico ',{
-        delay: 10000,
+        delay: 5000,
         media: "https://i.ibb.co/7KJGhQJ/Captura-de-pantalla-2024-06-26-135915.png",
     });
 
@@ -129,14 +134,14 @@ const flowUbicacion = addKeyword(['4', 'Ubicacion', 'Ubicación'])
 const flowInscripciones = addKeyword(['3', 'Inscripciones', 'inscripciones'])
     .addAnswer('Para conocer mas informacion acerca ' +
     'del proceso de inscripcion te comparto la siguiente imagen☝🏻',{
-        delay: 10000 ,    
+        delay: 5000,    
         media: "https://i.postimg.cc/Jh1BfzrY/408993623-862056865853751-2546998439695152438-n.jpg"
     });
 
 
 const flowContacto = addKeyword(['5', 'Contacto', 'Contactanos', 'contactanos'])
     .addAnswer('📱 Para contactarnos puedes visitarnos en nuestras redes sociales como: \n*@TecNMRegionS*',{
-        delay: 10000,
+        delay: 5000,
         media: "https://i.ibb.co/SJyvfr6/imagentec.jpg",
     });
 
@@ -144,25 +149,32 @@ const flowContacto = addKeyword(['5', 'Contacto', 'Contactanos', 'contactanos'])
 // Flujo para informacion de la institucion
 const flowAsesor = addKeyword(['6', 'Asesor', 'asesor'])
     .addAnswer('Para tener una atención personalizada por llamada porfavor comunicarse al: \n☎️ *932-324-0640 ext - 135*', {
-            delay: 10000
+            delay: 5000
     });
 
 // Flujos adicionales
 // Flujo de bienvenida
 const flowBienvenida = addKeyword(['Hola', 'hola', '.', 'buenos dias', 'Buenos dias', 'buenas tardes', 'Buenas tardes', 'buenas noches', 'Buenas noches'])
     .addAnswer(`${getSaludo()}. Hola, soy el chat-bot del ITSS 🤖 Bienvenido al menú principal. Por favor elige una opción:
-    \n1. Información sobre nuestras ingenierías
-    \n2. Información sobre nuestra institución
-    \n3. Proceso de admisión
-    \n4. Ubicación
-    \n5. Contacto
-    \n6. Hablar con un asesor
-    \nEscribe el número de la opción deseada.`,{
-        delay: 10000
+    \n*1.* Información sobre nuestras ingenierías
+    \n*2.* Información sobre nuestra institución
+    \n*3.* Proceso de admisión
+    \n*4.* Ubicación
+    \n*5.* Contacto
+    \n*6.* Hablar con un asesor
+    \n*Escribe el número de la opción deseada.*`,{
+        delay: 5000
     });
 
 const flowAdios = addKeyword(['Adios', 'adios', 'adiós', 'Adiós', 'Ok', 'ok', 'Gracias', 'gracias'])
-    .addAnswer('Hasta luego, que tengas un buen día. #TeamITSS 😎📚');
+    .addAnswer('Hasta luego, que tengas un buen día. #TeamITSS 😎📚',{
+        delay: 4000
+    });
+
+//flujo de broma para groserias
+const flowInsulto = addKeyword(['Pene', 'pene', 'picho', 'Picho'])
+    .addAnswer('Comes 😋. Atte: #TeamITSS. JAJAJA',{
+    });
 
 const mainFlow = createFlow([
     flowInformacionCarreras,
@@ -172,6 +184,7 @@ const mainFlow = createFlow([
     flowInscripciones,
     flowAsesor,
     flowAdios,
+    flowInsulto,
     flowBienvenida
     
 ]);
@@ -186,6 +199,7 @@ const main = async () => {
     flowInscripciones,
     flowAsesor,
     flowAdios,
+    flowInsulto,
     flowBienvenida
     ])
     const adapterProvider = createProvider(BaileysProvider)
