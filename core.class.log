@@ -1,29 +1,26 @@
 [handleMsg]:  {
   key: {
-    remoteJid: '5219321191952@s.whatsapp.net',
+    remoteJid: '5219321156539@s.whatsapp.net',
     fromMe: false,
-    id: '7757D0E6893692BF98',
+    id: '47BBF5D9F3853524A2463B1EB8C883F7',
     participant: undefined
   },
-  messageTimestamp: 1719469404,
-  pushName: 'Miguel Alexis',
+  messageTimestamp: 1719471990,
+  pushName: 'Eduardo Jiménez',
   broadcast: false,
   message: Message {
-    extendedTextMessage: ExtendedTextMessage {
-      text: 'según yo, no debería de haber problema',
-      contextInfo: [ContextInfo]
-    },
+    conversation: 'Ola',
     messageContextInfo: MessageContextInfo {
       deviceListMetadata: [DeviceListMetadata],
       deviceListMetadataVersion: 2
     }
   },
-  body: 'según yo, no debería de haber problema',
-  from: '5219321191952'
+  body: 'Ola',
+  from: '5219321156539'
 }
 [QUEUE_SE_ENVIO]:  {
-  ref: 'ans_26d8f75d-94a6-4052-8c03-d052fd2fe6d4',
-  keyword: 'key_340889fd-7090-4769-aefa-29d30b9ac46b',
+  ref: 'ans_2c2adb37-c284-4e5f-98f5-50d698e815b2',
+  keyword: 'key_6e47eb50-3b28-43e6-9d94-3a39e3420a60',
   answer: 'Buenas noches. Hola, soy el chat-bot del ITSS 🤖 Bienvenido al menú principal. Por favor elige una opción:\n' +
     '    \n' +
     '1. Información sobre nuestras ingenierías\n' +
@@ -51,69 +48,44 @@
     keyword: {},
     callback: false
   },
-  refSerialize: 'e3719613caaaed6f19a3ee37084dc03b'
+  refSerialize: '7a5fa7cd09e032ea29d166c47e966685'
 }
 [handleMsg]:  {
   key: {
-    remoteJid: '5219321191952@s.whatsapp.net',
+    remoteJid: '5219321156539@s.whatsapp.net',
     fromMe: false,
-    id: '0FC971FC3BFFFFDBD1',
+    id: 'F114B98CC6019DD3FAA5D6F954CC4391',
     participant: undefined
   },
-  messageTimestamp: 1719469423,
-  pushName: 'Miguel Alexis',
+  messageTimestamp: 1719472007,
+  pushName: 'Eduardo Jiménez',
   broadcast: false,
   message: Message {
-    extendedTextMessage: ExtendedTextMessage { text: '1', contextInfo: [ContextInfo] },
+    conversation: '5',
     messageContextInfo: MessageContextInfo {
       deviceListMetadata: [DeviceListMetadata],
       deviceListMetadataVersion: 2
     }
   },
-  body: '1',
-  from: '5219321191952'
+  body: '5',
+  from: '5219321156539'
 }
 [QUEUE_SE_ENVIO]:  {
-  ref: 'ans_47e419a9-657d-406d-a4ee-06aaae89c4b6',
-  keyword: 'key_914ae83b-02fd-4ffe-aa24-8e7c1982d34c',
-  answer: 'Contamos con 7 carreras:\n' +
-    '*- Administración* \n' +
-    '*- Agronomía* \n' +
-    '*- Bioquímica*\n' +
-    '*- Electromecánica*\n' +
-    '*- Energías renovables*\n' +
-    '*- Industrial* \n' +
-    '*- Informática* \n' +
-    '¿De qué carrera te gustaría información?',
+  ref: 'ans_cba09c31-e18b-40e0-bb54-603dac2055e1',
+  keyword: 'key_f207d015-27d2-4b7c-a419-76f5c24fa49c',
+  answer: '📱 Para contactarnos puedes visitarnos en nuestras redes sociales como: \n' +
+    '*@TecNMRegionS*',
   options: {
-    media: null,
+    media: 'https://i.ibb.co/SJyvfr6/imagentec.jpg',
     buttons: [],
     capture: false,
     child: null,
-    delay: 0,
+    delay: 10000,
     idle: null,
     ref: null,
     nested: [],
     keyword: {},
     callback: false
   },
-  refSerialize: 'badc8bdf290af1d8e3cbf23ce86916c6'
-}
-[QUEUE_SE_ENVIO]:  {
-  ref: 'ans_290b7edc-d298-4dd8-849b-ba3eda4199f2',
-  keyword: 'ans_47e419a9-657d-406d-a4ee-06aaae89c4b6',
-  answer: 'Por favor, escribe el nombre de la carrera.',
-  options: {
-    media: null,
-    buttons: [],
-    capture: true,
-    child: null,
-    delay: 0,
-    idle: null,
-    ref: null,
-    nested: [],
-    keyword: {},
-    callback: true
-  },
-  refSerialize: 'a0d4f931092c3d3223687ca31f531410'
+  refSerialize: 'dd74327a75cff2d7b93cc0330d8a6291'
 }
