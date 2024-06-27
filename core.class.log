@@ -1,0 +1,119 @@
+[handleMsg]:  {
+  key: {
+    remoteJid: '5219321191952@s.whatsapp.net',
+    fromMe: false,
+    id: '7757D0E6893692BF98',
+    participant: undefined
+  },
+  messageTimestamp: 1719469404,
+  pushName: 'Miguel Alexis',
+  broadcast: false,
+  message: Message {
+    extendedTextMessage: ExtendedTextMessage {
+      text: 'según yo, no debería de haber problema',
+      contextInfo: [ContextInfo]
+    },
+    messageContextInfo: MessageContextInfo {
+      deviceListMetadata: [DeviceListMetadata],
+      deviceListMetadataVersion: 2
+    }
+  },
+  body: 'según yo, no debería de haber problema',
+  from: '5219321191952'
+}
+[QUEUE_SE_ENVIO]:  {
+  ref: 'ans_26d8f75d-94a6-4052-8c03-d052fd2fe6d4',
+  keyword: 'key_340889fd-7090-4769-aefa-29d30b9ac46b',
+  answer: 'Buenas noches. Hola, soy el chat-bot del ITSS 🤖 Bienvenido al menú principal. Por favor elige una opción:\n' +
+    '    \n' +
+    '1. Información sobre nuestras ingenierías\n' +
+    '    \n' +
+    '2. Información sobre nuestra institución\n' +
+    '    \n' +
+    '3. Proceso de admisión\n' +
+    '    \n' +
+    '4. Ubicación\n' +
+    '    \n' +
+    '5. Contacto\n' +
+    '    \n' +
+    '6. Hablar con un asesor\n' +
+    '    \n' +
+    'Escribe el número de la opción deseada.',
+  options: {
+    media: null,
+    buttons: [],
+    capture: false,
+    child: null,
+    delay: 10000,
+    idle: null,
+    ref: null,
+    nested: [],
+    keyword: {},
+    callback: false
+  },
+  refSerialize: 'e3719613caaaed6f19a3ee37084dc03b'
+}
+[handleMsg]:  {
+  key: {
+    remoteJid: '5219321191952@s.whatsapp.net',
+    fromMe: false,
+    id: '0FC971FC3BFFFFDBD1',
+    participant: undefined
+  },
+  messageTimestamp: 1719469423,
+  pushName: 'Miguel Alexis',
+  broadcast: false,
+  message: Message {
+    extendedTextMessage: ExtendedTextMessage { text: '1', contextInfo: [ContextInfo] },
+    messageContextInfo: MessageContextInfo {
+      deviceListMetadata: [DeviceListMetadata],
+      deviceListMetadataVersion: 2
+    }
+  },
+  body: '1',
+  from: '5219321191952'
+}
+[QUEUE_SE_ENVIO]:  {
+  ref: 'ans_47e419a9-657d-406d-a4ee-06aaae89c4b6',
+  keyword: 'key_914ae83b-02fd-4ffe-aa24-8e7c1982d34c',
+  answer: 'Contamos con 7 carreras:\n' +
+    '*- Administración* \n' +
+    '*- Agronomía* \n' +
+    '*- Bioquímica*\n' +
+    '*- Electromecánica*\n' +
+    '*- Energías renovables*\n' +
+    '*- Industrial* \n' +
+    '*- Informática* \n' +
+    '¿De qué carrera te gustaría información?',
+  options: {
+    media: null,
+    buttons: [],
+    capture: false,
+    child: null,
+    delay: 0,
+    idle: null,
+    ref: null,
+    nested: [],
+    keyword: {},
+    callback: false
+  },
+  refSerialize: 'badc8bdf290af1d8e3cbf23ce86916c6'
+}
+[QUEUE_SE_ENVIO]:  {
+  ref: 'ans_290b7edc-d298-4dd8-849b-ba3eda4199f2',
+  keyword: 'ans_47e419a9-657d-406d-a4ee-06aaae89c4b6',
+  answer: 'Por favor, escribe el nombre de la carrera.',
+  options: {
+    media: null,
+    buttons: [],
+    capture: true,
+    child: null,
+    delay: 0,
+    idle: null,
+    ref: null,
+    nested: [],
+    keyword: {},
+    callback: true
+  },
+  refSerialize: 'a0d4f931092c3d3223687ca31f531410'
+}
